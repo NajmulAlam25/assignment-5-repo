@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +60,12 @@
       </div>
     </div>
 </div>
-<div id="card-click2">
+
+
+<!-- ------------------- -->
+
+
+<div id="card-click">
    <div class="card w-64 h-64 bg-white-100 my-4 border-2 ">
       <figure class="px-10 pt-10">
         <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
@@ -82,7 +87,7 @@
       </div>
     </div>
 </div>
-<div id="card-click3">
+<div id="card-click">
    <div class="card w-64 h-64 bg-white-100 rounded  my-4 border-2">
       <figure class="px-10 pt-10">
         <img src="images/prod3.png" alt="Shoes" class="rounded-xl " />
@@ -108,8 +113,19 @@
 <div>
    <div class=" w-80 h-36 px-4 mt-4 ">
       <h2 class=" font-bold my-2 text-black">Have coupon?</h2>
-      <input id="disable-btn" type="text" placeholder="coupon code" class="px-4 bg-[#FFF]" />
-      <button id="coupon-btn" class="bg-pink-500 rounded px-2  text-white">Apply</button>
+      <div class="form-control">
+         <div class="input-group">
+           <input id="disable-btn" type="text"placeholder="coupon code" class="input input-bordered px-4 bg-[#FFF] " />
+           <button disabled disabled id="coupon-btn" class=" btn btn-square   btn btn-secondary bg-pink-600 font-bold text-white">Apply
+             
+           </button>
+         </div>
+       </div>
+
+
+
+
+
       </div>
    <div>
    
@@ -117,12 +133,34 @@
 
    </div>
       <ul class="text-black">
-         <li>Total price: <span class=" font-bold" id="total-price">00</span> </li>
-         <li>Discount : <span></span></li>
-         <li>Total: <span></span></li>
+         <li>Total price: <span class=" font-bold" id="total-price">00</span>TK</li>
+         <li>Discount : <span id="discount-calculation">00</span>TK</li>
+         <!-- <li>Total: <span >hello</span>TK</li> -->
+         <p> Total:<span id="total-call" >00</span>Tk</p>
       </ul>
-      <button class="bg-pink-600 w-48 mr-4 my-4 px-2 font-bold text-white">Make Purchase</button>
-      
+   
+
+<!-- modal part -->
+<div class="card-actions text-center">
+                  
+
+   
+   <button disabled onclick="my_modal_2.showModal()"   id="Make-Parces" class=" btn btn-secondary     bg-pink-600 w-48 mr-4 my-4 px-2 font-bold text-white" >Make Purchase</button>
+
+   <dialog id="my_modal_2" class="modal">
+   <form method="dialog" class="modal-box ">
+       <img src="./images/congo.png" alt="logo" class="mx-auto"  />
+<h3>
+   congratulations
+</h3>
+<p>
+   Your Purchase the product
+</p>
+<div class="modal-action">
+   <button id="modal-btn" class="btn">Go to Home</button>
+ </div>
+<!-- modal
+ -->
    </div>
 </div>
 
